@@ -15,11 +15,11 @@ test('creates a new post', async () => {
 );
   const handlePostCreated = jest.fn();
   render(<CreatePostForm onPostCreated={handlePostCreated} />);
-  act(() => {
-    
-  })
+  await act(async() => {
   fireEvent.change(screen.getByPlaceholderText(/Title/i), { target: { value: 'New Post' } });
   fireEvent.change(screen.getByPlaceholderText(/Body/i), { target: { value: 'This is a new post.' } });
   fireEvent.click(screen.getByText(/Create Post Button/i));
+  })
+  
   expect(handlePostCreated).toHaveBeenCalled();
 });
