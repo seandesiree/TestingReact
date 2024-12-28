@@ -3,21 +3,36 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/react": "^16.0.1",
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.3.1",
     "react-axios": "^2.0.6",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "scripts": "^0.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

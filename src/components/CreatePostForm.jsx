@@ -37,7 +37,7 @@ import React, { useState } from 'react';
           placeholder="Body"
           required
         ></textarea>
-        <button type="submit">Create</button>
+        <button type="submit">Create Post Button</button>
       </form>
     );
   };

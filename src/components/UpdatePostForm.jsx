@@ -31,7 +31,7 @@ import React, { useState } from 'react';
           onChange={e => setBody(e.target.value)}
           required
         ></textarea>
-        <button type="submit">Update</button>
+        <button type="submit">Update Post Button</button>
       </form>
     );
   };
